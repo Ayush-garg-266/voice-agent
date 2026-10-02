@@ -1,0 +1,73 @@
+# Environment files - SECURE & MANDATORY
+.env
+.env.*
+!.env.example
+
+# Virtual Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Databases & Vector DBs
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+data/chroma/
+q2_knowledge_base/data/chroma/
+
+# IDEs & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Scratch & Logs
+scratch/
+logs/
+*.log
+
+# Speech Model Weights
+q3_multilingual/speech/models/*.onnx
+q3_multilingual/speech/models/*.bin
+q3_multilingual/speech/models/*.pt
+q3_multilingual/speech/models/*.safetensors
+
+# Recordings & Audio Outputs
+*.wav
+recordings/*.wav
+recordings/**/*.wav
+*.mp3
+recordings/*.mp3
+recordings/**/*.mp3
+recordings/*.webm
+
+# Track required Q3 MP3 evidence recordings
+!recordings/q3/ph_call_01_cooperative.mp3
+!recordings/q3/ph_call_02_escalation.mp3
+!recordings/q3/id_call_01_cooperative.mp3
+!recordings/q3/id_call_02_regional.mp3

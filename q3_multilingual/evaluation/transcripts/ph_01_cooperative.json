@@ -1,0 +1,18 @@
+{
+  "test_id": "ph_01_cooperative",
+  "name": "1. PH Cooperative Customer (Bancassurance Renewal)",
+  "transcript": [
+    {
+      "user": "Magandang araw po, tumawag po kayo tungkol sa aking Sun Life policy?",
+      "bot": "Opo, magandang araw po! Tumatawag po ako bilang inyong Bancassurance Specialist para i-check ang status ng inyong Sun Life policy at matulungan kayo sa inyong mga katanungan. Kumusta naman po ang inyong coverage ngayon?",
+      "stage": "GREETING",
+      "escalated": false
+    },
+    {
+      "user": "Oo po, magkano po ulit ang aking buwanang premium at kailan ang due date?",
+      "bot": "Opo, ang inyong buwanang premium po ay ₱2,500.00 at ito po ay due sa susunod na linggo. Nasa 31-day grace period pa naman po kayo, kaya may sapat na oras pa po para ma-settle.",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

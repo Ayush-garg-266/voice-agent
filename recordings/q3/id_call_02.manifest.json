@@ -1,0 +1,13 @@
+{
+  "call_id": "id_call_02",
+  "market": "Indonesia",
+  "domain": "Multifinance / Consumer Finance",
+  "scenario": "Regional Javanese Accent Dialect Negotiation",
+  "audio_file": "id_call_02_regional.mp3",
+  "language": "Bahasa Indonesia + Javanese Regional Dialect",
+  "asr_provider": "Deepgram Nova-2 (id-ID) + LLM Normalization",
+  "tts_provider": "Google Cloud TTS (id-ID-Wavenet-A)",
+  "transcript_json": "q3_multilingual/evaluation/transcripts/id_06_regional_accent.json",
+  "compliance_verified": true,
+  "notes": "Evidence structure prepared for 2 recorded calls per market."
+}

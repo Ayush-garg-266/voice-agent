@@ -1,0 +1,12 @@
+{
+  "test_id": "id_06_regional_accent",
+  "name": "6. ID Regional Javanese Accent Dialect Scenario",
+  "transcript": [
+    {
+      "user": "Piye iki mas, angsuranku sepeda motor sik kurang 200 ewu, iso ditunda po ora yo matur nuwun.",
+      "bot": "Mohon maaf Bapak, ketentuan angsuran kami tidak dapat ditunda dan harus dibayarkan sesuai jadwal jatuh tempo untuk menghindari denda keterlambatan sebesar 0.5% per hari. Agar lebih jelas, saya bantu hubungkan langsung dengan Customer Service Officer (CSO) kami di kantor cabang terdekat untuk penanganan lebih lanjut ya, Pak.",
+      "stage": "GREETING",
+      "escalated": true
+    }
+  ]
+}

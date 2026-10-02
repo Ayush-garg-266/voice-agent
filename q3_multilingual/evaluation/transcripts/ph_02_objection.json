@@ -1,0 +1,12 @@
+{
+  "test_id": "ph_02_objection",
+  "name": "2. PH Sector-Specific Objection (Price / Budget)",
+  "transcript": [
+    {
+      "user": "Medyo mahal po kasi ang premium buwan-buwan. Wala akong budget ngayon.",
+      "bot": "Naiintindihan ko po kayo! Pwede naman po nating i-adjust ang monthly premium down to ₱1,500.00 per month para mas kayang-kaya po sa inyong budget habang tuloy pa rin ang inyong coverage.",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

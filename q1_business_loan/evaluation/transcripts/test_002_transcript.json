@@ -1,0 +1,66 @@
+{
+  "scenario_id": "TEST_002",
+  "turns_executed": 2,
+  "transcript": [
+    {
+      "turn": 1,
+      "user_message": "I run Apex Global LLC, 2 years operating history, $150,000 revenue.",
+      "agent_response": "Hello, and welcome to SME Financial Services! I'd like to understand your business and loan requirements to see whether this may be a suitable fit for our commercial borrowing programs. \n\nIt\u2019s great to meet you, and thanks for sharing those details about Apex Global LLC; could you also let me know your approximate monthly cashflow?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 1223.34,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    },
+    {
+      "turn": 2,
+      "user_message": "Why is your interest rate so high for unsecured loans?",
+      "agent_response": "I completely understand your concern regarding the rates. Unlike personal or mortgage loans, unsecured business loans carry higher risk for lenders because we do not ask for your real estate as collateral up front.",
+      "tool_called": true,
+      "kb_query": "Why is your interest rate so high for unsecured loans?",
+      "retrieved_source": "objection_handling_guide.md",
+      "retrieved_record_id": "kb_src_doc_002_004",
+      "turn_latency_ms": 3927.72,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    }
+  ],
+  "final_qualification_result": {
+    "qualification_status": "needs_review",
+    "missing_information": [
+      "requested_amount"
+    ],
+    "collected_information": {
+      "business_name": "Apex Global LLC",
+      "operating_months": 24,
+      "annual_revenue": 150000.0
+    },
+    "retrieved_evidence": [
+      {
+        "record_id": "kb_src_doc_002_004",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 1: \"Your interest rate is too high.\"",
+        "content_snippet": "- **Root Cause**: Customer comparing unsecured business loan rates to residential mortgages or personal savings loans.\n- **Grounded Response**:\n \"I completely understand your concern about interest ra...",
+        "relevance_score": 0.9785
+      },
+      {
+        "record_id": "kb_src_doc_002_008",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 5: \"The repayment period / tenor is too short.\"",
+        "content_snippet": "- **Root Cause**: Monthly monthly installment (EMI) payments are too high for short 12-month tenure.\n- **Grounded Response**:\n \"We offer flexible tenors ranging from 6 months up to 36 months for unsec...",
+        "relevance_score": 0.1432
+      },
+      {
+        "record_id": "kb_src_doc_001_004",
+        "source_document": "product_guidelines_v2.md",
+        "section": "Loan Parameters Table",
+        "content_snippet": "| Parameter | Unsecured Business Loan | Secured Equipment / Property Loan |\n| :--- | :--- | :--- |\n| **Loan Amount Range** | $10,000 \u2013 $100,000 | $100,001 \u2013 $500,000 |\n| **Tenure / Duration** | 6 mont...",
+        "relevance_score": 0.0531
+      }
+    ],
+    "next_step": "Prompt applicant for missing information: requested_amount.",
+    "escalation_required": false
+  }
+}

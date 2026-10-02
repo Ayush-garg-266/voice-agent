@@ -1,0 +1,12 @@
+{
+  "test_id": "id_04_colloquial",
+  "name": "4. ID Colloquial Bahasa Indonesia",
+  "transcript": [
+    {
+      "user": "Gimana sih bro, kemarin dibilang bebas denda kalo telat sehari. Kok sekarang ditagih?",
+      "bot": "Mohon maaf atas ketidaknyamanannya, Bapak. Ketentuan resmi dari Nusa Finance menetapkan denda keterlambatan sebesar 0.5% per hari sesuai aturan OJK tanpa ada kebijakan bebas denda untuk hari pertama. Jika Bapak membutuhkan penjelasan lebih lanjut mengenai rincian tagihan ini, saya dapat membantu menghubungkan Bapak dengan Supervisor kami, Pak.",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

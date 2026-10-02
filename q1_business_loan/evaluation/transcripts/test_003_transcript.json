@@ -1,0 +1,45 @@
+{
+  "scenario_id": "TEST_003",
+  "turns_executed": 2,
+  "transcript": [
+    {
+      "turn": 1,
+      "user_message": "My business is Vantage Retail LLC, operating for 24 months.",
+      "agent_response": "Hello and welcome to SME Financial Services! I'd like to understand your business and loan requirements to see whether this may be a suitable fit for our commercial borrowing programs. It's great to hear you've been operating Vantage Retail LLC for 24 months; could you please share your approximate annual revenue and monthly cashflow?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 943.71,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    },
+    {
+      "turn": 2,
+      "user_message": "My annual revenue is $500,000, but recent monthly cashflow is $10,000.",
+      "agent_response": "I noticed your annual revenue estimate is $500k, but recent monthly cashflow is around $10k. Could you help me understand any seasonal fluctuations?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 819.53,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    }
+  ],
+  "final_qualification_result": {
+    "qualification_status": "needs_review",
+    "missing_information": [
+      "requested_amount"
+    ],
+    "collected_information": {
+      "business_name": "Vantage Retail LLC",
+      "operating_months": 24,
+      "annual_revenue": 500000.0,
+      "monthly_cashflow": 10000.0
+    },
+    "retrieved_evidence": [],
+    "next_step": "Prompt applicant for missing information: requested_amount.",
+    "escalation_required": false
+  }
+}

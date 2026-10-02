@@ -1,0 +1,56 @@
+{
+  "scenario_id": "TEST_001",
+  "turns_executed": 3,
+  "transcript": [
+    {
+      "turn": 1,
+      "user_message": "My business name is Nexus Technology LLC. We've been operating for 3 years.",
+      "agent_response": "Hello, and thank you for reaching out to SME Financial Services! I'd like to understand your business and loan requirements to see whether this may be a suitable fit for our commercial borrowing programs. It's great to hear you're operating as Nexus Technology LLC with three years of history\u2014could you share your approximate annual revenue and average monthly cashflow?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 976.26,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    },
+    {
+      "turn": 2,
+      "user_message": "Our annual revenue is $250,000 and monthly cashflow is around $20,000.",
+      "agent_response": "Thank you for sharing those figures, which align nicely with our baseline criteria. What approximate loan amount are you looking for, and what will be the primary purpose of the funds, such as working capital or equipment purchase?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 1019.61,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    },
+    {
+      "turn": 3,
+      "user_message": "I am looking to borrow $50,000 for purchasing inventory.",
+      "agent_response": "Thank you for providing those details. Could you let me know your preferred repayment tenor for this $50,000 inventory loan?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 866.23,
+      "qualification_status": "prequalified",
+      "escalation_required": false
+    }
+  ],
+  "final_qualification_result": {
+    "qualification_status": "prequalified",
+    "missing_information": [],
+    "collected_information": {
+      "business_name": "Nexus Technology LLC",
+      "operating_months": 36,
+      "annual_revenue": 250000.0,
+      "requested_amount": 50000.0,
+      "loan_purpose": "purchasing inventory"
+    },
+    "retrieved_evidence": [],
+    "next_step": "Issue preliminary conditional pre-qualification and trigger digital document upload link.",
+    "escalation_required": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": "ph_05_escalation",
+  "name": "5. PH Human Escalation Request",
+  "transcript": [
+    {
+      "user": "Gusto ko po makausap ang totoong tao o ang Bank Branch Manager ngayon din.",
+      "bot": "Naiintindihan ko po. I-transfer ko po ang inyong tawag sa aming Senior Bancassurance Specialist sa pinakamalapit na partner bank branch para mas maasikaso po kayo. Sandali lamang po.",
+      "stage": "ESCALATED",
+      "escalated": true
+    }
+  ]
+}

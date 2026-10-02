@@ -1,0 +1,18 @@
+{
+  "test_id": "id_01_cooperative",
+  "name": "1. ID Cooperative Customer (Multifinance Motor Loan)",
+  "transcript": [
+    {
+      "user": "Selamat siang Pak Budi, saya mau menanyakan tagihan angsuran motor saya bulan ini.",
+      "bot": "Selamat siang Bapak. Saya Budi dari Nusa Finance Multifinance siap membantu pengecekan tagihan angsuran motor Bapak. \n\nUntuk angsuran bulan ini sebesar Rp 450.000,- dengan jatuh tempo tanggal 15 Oktober 2026, dan status saat ini belum terbayar Pak. Ada yang bisa saya bantu selanjutnya?",
+      "stage": "GREETING",
+      "escalated": false
+    },
+    {
+      "user": "Berapa nominal angsurannya dan kapan tanggal jatuh temponya Pak?",
+      "bot": "Selamat siang Bapak, nominal angsuran Bapak adalah sebesar Rp 450.000,- dengan tanggal jatuh tempo setiap tanggal 15 Oktober 2026. Ada hal lain terkait pembiayaan yang bisa saya bantu, Pak?",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

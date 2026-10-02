@@ -1,0 +1,13 @@
+{
+  "call_id": "ph_call_02",
+  "market": "Philippines",
+  "domain": "Bancassurance / Life Insurance",
+  "scenario": "Human Escalation to Bank Branch Manager",
+  "audio_file": "ph_call_02_escalation.mp3",
+  "language": "Taglish (English + Tagalog)",
+  "asr_provider": "Deepgram Nova-2 (tl-PH + en-PH)",
+  "tts_provider": "Google Cloud TTS (fil-PH-Neural2-D)",
+  "transcript_json": "q3_multilingual/evaluation/transcripts/ph_05_escalation.json",
+  "compliance_verified": true,
+  "notes": "Evidence structure prepared for 2 recorded calls per market."
+}

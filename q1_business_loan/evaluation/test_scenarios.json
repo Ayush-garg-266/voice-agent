@@ -1,0 +1,59 @@
+[
+  {
+    "scenario_id": "TEST_001",
+    "title": "Cooperative Customer Qualification",
+    "description": "Applicant provides complete, valid business details and qualifies smoothly.",
+    "turns": [
+      "Hello, I'd like to check if my company qualifies for a business loan.",
+      "My business name is Nexus Technology LLC. We've been operating for 3 years.",
+      "Our annual revenue is $250,000 and monthly cashflow is around $20,000.",
+      "I am looking to borrow $50,000 for purchasing inventory."
+    ],
+    "expected_status": "prequalified",
+    "expected_escalation": false
+  },
+  {
+    "scenario_id": "TEST_002",
+    "title": "Interest Rate Objection Handling",
+    "description": "Applicant challenges interest rates; bot retrieves grounded explanation from Q2.",
+    "turns": [
+      "I run Apex Global LLC, 2 years operating history, $150,000 revenue.",
+      "Why is your interest rate so high for unsecured loans?"
+    ],
+    "expected_status": "needs_review",
+    "expected_tool_call": true,
+    "expected_escalation": false
+  },
+  {
+    "scenario_id": "TEST_003",
+    "title": "Conflicting Business Details",
+    "description": "Applicant provides contradictory revenue figures ($500k annual vs $10k monthly).",
+    "turns": [
+      "My business is Vantage Retail LLC, operating for 24 months.",
+      "My annual revenue is $500,000, but recent monthly cashflow is $10,000."
+    ],
+    "expected_status": "needs_review",
+    "expected_escalation": false
+  },
+  {
+    "scenario_id": "TEST_004",
+    "title": "Out-of-Scope Fallback",
+    "description": "Applicant asks for personal tax filing advice not covered by Q2 KB.",
+    "turns": [
+      "My business is Horizon Corp, 2 years operating history.",
+      "How do I file my personal residential mortgage tax deduction in Texas?"
+    ],
+    "expected_fallback": true,
+    "expected_escalation": false
+  },
+  {
+    "scenario_id": "TEST_005",
+    "title": "Customer Requests Human Assistance",
+    "description": "Applicant explicitly demands a human agent; bot triggers immediate escalation handoff.",
+    "turns": [
+      "I want to speak with a human loan officer right now."
+    ],
+    "expected_status": "escalated",
+    "expected_escalation": true
+  }
+]

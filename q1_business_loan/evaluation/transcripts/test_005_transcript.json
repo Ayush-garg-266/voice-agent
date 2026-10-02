@@ -1,0 +1,33 @@
+{
+  "scenario_id": "TEST_005",
+  "turns_executed": 1,
+  "transcript": [
+    {
+      "turn": 1,
+      "user_message": "I want to speak with a human loan officer right now.",
+      "agent_response": "I completely understand. I am transferring your request to a senior human loan officer who will follow up with you directly. Have a great day!",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 0.28,
+      "qualification_status": "escalated",
+      "escalation_required": true
+    }
+  ],
+  "final_qualification_result": {
+    "qualification_status": "escalated",
+    "missing_information": [
+      "business_name",
+      "operating_months",
+      "annual_revenue",
+      "requested_amount"
+    ],
+    "collected_information": {
+      "escalation_reason": "Customer requested human assistance."
+    },
+    "retrieved_evidence": [],
+    "next_step": "Transfer caller to senior loan officer and schedule callback.",
+    "escalation_required": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "demo_notice": "DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY",
+  "form_id": "FORM_SME_QUAL_2026",
+  "version": "2.1",
+  "last_updated": "2026-02-01",
+  "qualification_rules": {
+    "minimum_business_age_months": 12,
+    "minimum_annual_revenue_usd": 100000.00,
+    "minimum_monthly_cashflow_usd": 8000.00,
+    "eligible_entity_types": [
+      "Sole Proprietorship",
+      "LLC",
+      "Corporation",
+      "General Partnership"
+    ],
+    "ineligible_industries": [
+      "Gambling & Casinos",
+      "Speculative Cryptocurrency Trading",
+      "Unregistered Armaments",
+      "Personal Lending / Pawnshops"
+    ]
+  },
+  "required_documents_checklist": [
+    {
+      "doc_type": "bank_statements",
+      "description": "6 consecutive months of official corporate bank account statements",
+      "mandatory": true
+    },
+    {
+      "doc_type": "tax_returns",
+      "description": "Filed business tax returns for the last 2 tax years (Form 1120 or Schedule C)",
+      "mandatory": true
+    },
+    {
+      "doc_type": "business_license",
+      "description": "Active state or local business registration license",
+      "mandatory": true
+    },
+    {
+      "doc_type": "government_id",
+      "description": "Government-issued photo ID (Passport / Driver License) for owners with >= 20% equity",
+      "mandatory": true
+    }
+  ],
+  "financial_terminology_aliases": {
+    "revenue": ["gross annual revenue", "turnover", "sales volume", "gross sales", "annual receipts"],
+    "monthly_installment": ["EMI", "monthly payment", "cicilan", "angsuran", "scheduled repayment"],
+    "tenure": ["loan term", "duration", "tenor", "repayment period"],
+    "processing_fee": ["origination fee", "underwriting fee", "administrative charge"]
+  }
+}

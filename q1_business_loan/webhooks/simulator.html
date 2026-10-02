@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1 Business Loan Voice Agent — Interactive Simulator</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: #1e293b; border-radius: 12px; padding: 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        h1 { color: #38bdf8; margin-top: 0; }
+        .badge { background: #0284c7; color: white; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; }
+        .chat-box { height: 420px; overflow-y: auto; background: #0f172a; border-radius: 8px; padding: 16px; margin: 20px 0; border: 1px solid #334155; }
+        .msg { margin-bottom: 14px; padding: 10px 14px; border-radius: 8px; max-width: 82%; font-size: 0.95rem; line-height: 1.4; }
+        .msg.user { background: #2563eb; color: white; margin-left: auto; border-bottom-right-radius: 2px; }
+        .msg.agent { background: #334155; color: #f8fafc; margin-right: auto; border-bottom-left-radius: 2px; border-left: 4px solid #38bdf8; }
+        .msg.error { background: #7f1d1d; color: #fca5a5; margin-right: auto; border-left: 4px solid #ef4444; font-family: monospace; }
+        .citation-box { margin-top: 10px; padding: 10px 12px; background: #0f172a; border-radius: 6px; border: 1px solid #0284c7; font-size: 0.83rem; color: #7dd3fc; }
+        .citation-title { font-weight: 600; color: #38bdf8; margin-bottom: 6px; display: flex; align-items: center; gap: 6px; }
+        .input-group { display: flex; gap: 10px; }
+        input[type="text"] { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid #475569; background: #0f172a; color: white; font-size: 1rem; }
+        button { padding: 12px 24px; border-radius: 8px; border: none; background: #0284c7; color: white; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+        button:hover { background: #0369a1; }
+        .eval-panel { margin-top: 20px; background: #0f172a; border-radius: 8px; padding: 16px; border: 1px solid #334155; font-size: 0.85rem; font-family: monospace; }
+        .eval-title { font-weight: bold; color: #38bdf8; margin-bottom: 8px; }
+        pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Q1 Business Loan Voice Agent <span class="badge">Interactive Web Simulator</span></h1>
+        <p style="color: #94a3b8; font-size: 0.9rem;">Knowledge-Grounded Voice Agent powered by Google Gemini API & Q2 Hybrid RAG Knowledge Base.</p>
+
+        <div class="chat-box" id="chatBox">
+            <div class="msg agent">Hello! I'm your Senior Business Loan Representative. I'd like to understand your business and loan requirements to see whether this may be a suitable fit for our commercial borrowing programs. What is the name and type of your business?</div>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="userInput" placeholder="Type or speak your turn response (e.g. 'My company is Acme LLC, operational for 3 years...')" onkeydown="if(event.key==='Enter') sendTurn()">
+            <button onclick="sendTurn()">Send Turn</button>
+        </div>
+
+        <div class="eval-panel">
+            <div class="eval-title">Structured Qualification Output & Diagnostics:</div>
+            <pre id="evalOutput">Waiting for first turn...</pre>
+        </div>
+    </div>
+
+    <script>
+        const sessionId = "sess_web_" + Math.random().toString(36).substring(7);
+
+        function getTargetEndpoint() {
+            const isLocalFile = window.location.protocol === "file:" || !window.location.origin || window.location.origin === "null";
+            const baseUrl = isLocalFile ? "http://localhost:8001" : window.location.origin;
+            return baseUrl + "/q1/qualify";
+        }
+
+        async function sendTurn() {
+            const inputEl = document.getElementById("userInput");
+            const text = inputEl.value.trim();
+            if (!text) return;
+
+            appendMsg(text, "user");
+            inputEl.value = "";
+
+            const targetUrl = getTargetEndpoint();
+
+            try {
+                const response = await fetch(targetUrl, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ session_id: sessionId, user_message: text })
+                });
+
+                if (!response.ok) {
+                    const errText = await response.text();
+                    const errMsg = `HTTP ${response.status} ${response.statusText} from ${targetUrl}\n${errText}`;
+                    appendMsg("Error communicating with server: " + errMsg, "error");
+                    document.getElementById("evalOutput").textContent = errMsg;
+                    return;
+                }
+
+                const data = await response.json();
+
+                // Append agent response turn with Q2 citations if present
+                appendAgentTurn(data);
+
+                // Populate full structured qualification & telemetry output
+                const fullDebugInfo = {
+                    agent_response: data.agent_response,
+                    qualification_status: data.qualification_result?.qualification_status,
+                    missing_information: data.qualification_result?.missing_information,
+                    collected_information: data.qualification_result?.collected_information,
+                    retrieved_evidence: data.qualification_result?.retrieved_evidence,
+                    next_step: data.qualification_result?.next_step,
+                    escalation_required: data.qualification_result?.escalation_required,
+                    tool_called: data.tool_called,
+                    kb_query: data.kb_query,
+                    retrieved_source: data.retrieved_source,
+                    retrieved_record_id: data.retrieved_record_id,
+                    turn_latency_ms: data.turn_latency_ms
+                };
+
+                document.getElementById("evalOutput").textContent = JSON.stringify(fullDebugInfo, null, 2);
+
+            } catch (err) {
+                const diagMsg = `Error connecting to Q1 voice agent server at endpoint [${targetUrl}].\nDetails: ${err.message || err}`;
+                appendMsg("Connection Error: " + diagMsg, "error");
+                document.getElementById("evalOutput").textContent = diagMsg;
+            }
+        }
+
+        function appendMsg(text, role) {
+            const box = document.getElementById("chatBox");
+            const div = document.createElement("div");
+            div.className = "msg " + role;
+            div.textContent = text;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function appendAgentTurn(data) {
+            const box = document.getElementById("chatBox");
+            const div = document.createElement("div");
+            div.className = "msg agent";
+
+            let html = `<div>${escapeHtml(data.agent_response)}</div>`;
+
+            // Expose Q2 retrieval citations if RAG tool was called & returned evidence
+            if (data.tool_called && data.qualification_result?.retrieved_evidence && data.qualification_result.retrieved_evidence.length > 0) {
+                html += `<div class="citation-box">`;
+                html += `<div class="citation-title">📚 Verified Q2 KB Evidence Citation (${escapeHtml(data.retrieved_source || "Knowledge Base")} | ID: ${escapeHtml(data.retrieved_record_id || "N/A")}):</div>`;
+                data.qualification_result.retrieved_evidence.forEach(ev => {
+                    html += `<div style="margin-top: 4px; font-size: 0.8rem; line-height: 1.3;">• <strong>${escapeHtml(ev.source_document)}</strong> [${escapeHtml(ev.section || "General")}] (Relevance: ${ev.relevance_score}): <em>"${escapeHtml(ev.content_snippet)}"</em></div>`;
+                });
+                html += `</div>`;
+            }
+
+            div.innerHTML = html;
+            box.appendChild(div);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function escapeHtml(str) {
+            if (!str) return "";
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>

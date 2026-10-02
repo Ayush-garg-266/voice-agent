@@ -1,0 +1,45 @@
+{
+  "scenario_id": "TEST_004",
+  "turns_executed": 2,
+  "transcript": [
+    {
+      "turn": 1,
+      "user_message": "My business is Horizon Corp, 2 years operating history.",
+      "agent_response": "Hello, and thank you for reaching out to SME Financial Services! I'd like to understand your business and loan requirements to see whether this may be a suitable fit for our commercial borrowing programs. Could you please share your approximate annual revenue and monthly cashflow for Horizon Corp?",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 963.0,
+      "qualification_status": "needs_review",
+      "escalation_required": false
+    },
+    {
+      "turn": 2,
+      "user_message": "How do I file my personal residential mortgage tax deduction in Texas?",
+      "agent_response": "I completely understand. I am transferring your request to a senior human loan officer who will follow up with you directly. Have a great day!",
+      "tool_called": false,
+      "kb_query": null,
+      "retrieved_source": null,
+      "retrieved_record_id": null,
+      "turn_latency_ms": 0.34,
+      "qualification_status": "escalated",
+      "escalation_required": true
+    }
+  ],
+  "final_qualification_result": {
+    "qualification_status": "escalated",
+    "missing_information": [
+      "annual_revenue",
+      "requested_amount"
+    ],
+    "collected_information": {
+      "business_name": "Horizon Corp",
+      "operating_months": 24,
+      "escalation_reason": "Customer requested human assistance."
+    },
+    "retrieved_evidence": [],
+    "next_step": "Transfer caller to senior loan officer and schedule callback.",
+    "escalation_required": true
+  }
+}

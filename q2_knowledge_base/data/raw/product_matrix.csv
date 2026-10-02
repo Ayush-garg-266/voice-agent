@@ -1,0 +1,6 @@
+# DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY
+product_code,product_name,min_loan_amount,max_loan_amount,min_tenure_months,max_tenure_months,apr_range,processing_fee_pct,collateral_required,min_annual_turnover,min_operating_months
+SME-UNSEC-01,Express Unsecured Working Capital,10000,50000,6,24,9.5% - 17.5%,2.0%,FALSE,100000,12
+SME-UNSEC-02,Standard Commercial Growth Loan,50001,100000,12,36,8.5% - 16.0%,2.0%,FALSE,150000,18
+SME-SEC-01,Asset-Backed Expansion Loan,100001,300000,12,48,7.5% - 14.0%,1.5%,TRUE,250000,24
+SME-SEC-02,Enterprise Commercial Facility,300001,500000,24,60,6.5% - 12.5%,1.0%,TRUE,500000,36

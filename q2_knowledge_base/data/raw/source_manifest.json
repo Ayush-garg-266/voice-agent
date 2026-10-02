@@ -1,0 +1,78 @@
+{
+  "manifest_version": "1.0",
+  "generated_at": "2026-10-02T13:10:00Z",
+  "description": "Source manifest tracking raw synthetic business loan knowledge documents for Q2 Knowledge Base.",
+  "is_synthetic_dataset": true,
+  "sources": [
+    {
+      "source_id": "SRC_DOC_001",
+      "filename": "product_guidelines_v2.md",
+      "title": "DEMO Business Loan Product & Policy Guidelines",
+      "source_type": "markdown",
+      "version": "2.0",
+      "created_at": "2026-01-15",
+      "category": "product_policy",
+      "description": "Canonical product policies, loan ranges, interest rates, eligibility criteria, and repayment terms."
+    },
+    {
+      "source_id": "SRC_DOC_002",
+      "filename": "objection_handling_guide.md",
+      "title": "DEMO Business Loan Objection Handling & Customer Scripting Guide",
+      "source_type": "markdown",
+      "version": "1.2",
+      "created_at": "2025-11-20",
+      "category": "objection_scripts",
+      "description": "Representative scripts for handling rate, document, speed, and collateral objections."
+    },
+    {
+      "source_id": "SRC_DOC_003",
+      "filename": "escalation_and_edge_cases.md",
+      "title": "DEMO Edge Cases, Fallbacks & Human Escalation Matrix",
+      "source_type": "markdown",
+      "version": "1.0",
+      "created_at": "2026-02-10",
+      "category": "escalation_rules",
+      "description": "Rules for incomplete details, conflicting cashflow, unregistered businesses, and human transfers."
+    },
+    {
+      "source_id": "SRC_DOC_004",
+      "filename": "faq_webpage.html",
+      "title": "SME Business Loan FAQs - Demo Portal",
+      "source_type": "html",
+      "version": "2.0",
+      "created_at": "2026-01-20",
+      "category": "faqs",
+      "description": "Unstructured HTML web page containing FAQs, company contact details, and near-duplicate entries."
+    },
+    {
+      "source_id": "SRC_DOC_005",
+      "filename": "product_matrix.csv",
+      "title": "SME Commercial Product Tiers & Pricing Matrix",
+      "source_type": "csv",
+      "version": "2.0",
+      "created_at": "2026-01-15",
+      "category": "product_matrix",
+      "description": "Tabular data detailing loan amounts, tenures, APR ranges, processing fees, and collateral flags."
+    },
+    {
+      "source_id": "SRC_DOC_006",
+      "filename": "qualification_rules_form.json",
+      "title": "Business Loan Qualification Rules & Document Checklist Form",
+      "source_type": "json",
+      "version": "2.1",
+      "created_at": "2026-02-01",
+      "category": "qualification_rules",
+      "description": "Structured JSON schema defining eligibility bounds, document checklists, and terminology aliases."
+    },
+    {
+      "source_id": "SRC_DOC_LEGACY_001",
+      "filename": "product_policy_v1_legacy.md",
+      "title": "LEGACY Business Credit Policy Document (v1.0 - Superseded)",
+      "source_type": "markdown",
+      "version": "1.0",
+      "created_at": "2024-05-12",
+      "category": "legacy_policy",
+      "description": "Archived 2024 policy document containing superseded thresholds and near-duplicate FAQ entries."
+    }
+  ]
+}

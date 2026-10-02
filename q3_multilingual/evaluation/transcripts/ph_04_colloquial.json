@@ -1,0 +1,12 @@
+{
+  "test_id": "ph_04_colloquial",
+  "name": "4. PH Colloquial Taglish Speech",
+  "transcript": [
+    {
+      "user": "Ano ba 'yan, bakit nag-lapse ang policy ko? Pwede ba gcash payment na lang para mabilis?",
+      "bot": "Naku, huwag po kayong mag-alala! Dahil nasa 31-day grace period pa po kayo, maaari pa po nating ma-activate agad ang inyong policy. Pwedeng-pwede po kayong magbayad via GCash PayBills para mabilis at real-time po ang posting ng inyong payment!",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

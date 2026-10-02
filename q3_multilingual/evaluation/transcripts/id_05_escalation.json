@@ -1,0 +1,12 @@
+{
+  "test_id": "id_05_escalation",
+  "name": "5. ID Human Escalation Request",
+  "transcript": [
+    {
+      "user": "Saya tidak mau bicara sama bot, saya mau bicara sama CS officer pusat kantor cabang sekarang.",
+      "bot": "Baik Bapak, saya bantu hubungkan langsung dengan Customer Service Officer (CSO) kami di kantor cabang terdekat untuk penanganan lebih lanjut. Mohon tunggu sebentar ya Pak/Bu.",
+      "stage": "ESCALATED",
+      "escalated": true
+    }
+  ]
+}

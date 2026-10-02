@@ -1,0 +1,12 @@
+{
+  "test_id": "id_03_mixed_terms",
+  "name": "3. ID Mixed Finance English Loanwords",
+  "transcript": [
+    {
+      "user": "Apakah pembayaran DP-nya bisa dicicil lewat credit card dengan tenor 12 bulan via Virtual Account?",
+      "bot": "Tentu Bapak, pembayaran DP untuk fasilitas pembiayaan kami dapat dicicil menggunakan kartu kredit pilihan Bapak dengan tenor hingga 12 bulan. Pembayaran tersebut nantinya dapat diproses dengan mudah melalui fasilitas *Virtual Account* yang kami sediakan, Pak.",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "test_id": "id_02_objection",
+  "name": "2. ID Sector-Specific Objection (Denda Keterlambatan)",
+  "transcript": [
+    {
+      "user": "Waduh denda keterlambatannya kemahalan Mas 0.5% per hari, saya kan cuma telat 2 hari.",
+      "bot": "Kami sangat memahami kekhawatiran Bapak terkait besaran denda keterlambatan tersebut. Perhitungan denda sebesar 0.5% per hari ini sudah sesuai dengan ketentuan resmi yang berlaku dari OJK, Pak. Agar ke depannya Bapak terhindar dari denda, pembayaran dapat dilakukan sebelum tanggal jatuh tempo atau melalui fitur *auto-debit*, ya Pak.",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

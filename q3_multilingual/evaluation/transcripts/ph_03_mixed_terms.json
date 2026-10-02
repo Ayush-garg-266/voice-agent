@@ -1,0 +1,12 @@
+{
+  "test_id": "ph_03_mixed_terms",
+  "name": "3. PH Mixed English / Finance Terminology",
+  "transcript": [
+    {
+      "user": "Gusto ko sana mag-add ng Critical Illness Rider sa aking policy for additional coverage protection.",
+      "bot": "Magandang desisyon po iyan para mas maging protektado kayo! Pwede po nating idagdag ang Critical Illness rider sa inyong policy para may hiwalay kayong cash benefit sakaling magkaroon ng malubhang sakit. Gusto niyo po bang i-compute ko na ang magiging bago nating monthly premium kasama ang rider na ito?",
+      "stage": "GREETING",
+      "escalated": false
+    }
+  ]
+}

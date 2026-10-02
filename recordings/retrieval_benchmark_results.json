@@ -1,0 +1,252 @@
+[
+  {
+    "eval_id": "EVAL_001",
+    "category": "Business-loan eligibility requirements",
+    "user_question": "What are the eligibility requirements for a business loan?",
+    "top_retrieved_chunk_id": "kb_src_doc_001_007",
+    "source_document": "product_guidelines_v2.md",
+    "section_info": "3. Business Eligibility & Qualification Rules",
+    "relevance_score": 0.9976,
+    "relevance_explanation": "Retrieved relevant chunk from product_guidelines_v2.md [3. Business Eligibility & Qualification Rules] with score 0.9976. Grounded answer generated.",
+    "verdict": "PASS",
+    "info_available": true,
+    "grounded_answer": "To qualify for a Business Loan, the applicant enterprise must fulfill the following mandatory criteria:\n\n1. **Operating History**: Minimum of **12 months** of continuous active operation (24+ months preferred for premier interest rates).\n2. **Annual Revenue (Turnover)**: Minimum gross annual revenue of **$100,000 USD** (or local currency equivalent).\n3. **Monthly Cash Flow**: Positive net cash balance in business bank accounts for at least 3 of the last 4 consecutive months (with a minimum monthly cash flow of $8,000 USD).\n4. **Business Registration**: Legally registered entity (LLC, Corporation, Sole Proprietorship, Partnership/General Partnership) with an active business license.\n5. **Applicant Age**: The primary business owner/applicant must be between **21 and 65 years of age**.\n6. **Required Documentation**:\n   - 6 consecutive months of official corporate bank statements.\n   - Last 2 years of filed business tax returns (or audited P&L statement).\n   - Valid government ID of primary business owners holding \u226520% equity.\n   - Proof of business ownership and legal address (active state or local business registration license).",
+    "citations": [
+      {
+        "record_id": "kb_src_doc_001_007",
+        "source_document": "product_guidelines_v2.md",
+        "section": "3. Business Eligibility & Qualification Rules",
+        "content_snippet": "To qualify for a Business Loan, the applicant enterprise must fulfill the following mandatory criteria:\n\n1. **Operating History**: Minimum of **12 months** continuous active operation (24+ months pref...",
+        "relevance_score": 0.9976
+      },
+      {
+        "record_id": "kb_src_doc_004_001",
+        "source_document": "faq_webpage.html",
+        "section": "Overview / General",
+        "content_snippet": "SME Business Loan FAQs - Demo Portal\n\nFrequently Asked Questions (FAQ)\n\nQ1: What is a business loan and how can I use it?\n\nA business loan is a commercial credit facility provided to registered compan...",
+        "relevance_score": 0.9876
+      },
+      {
+        "record_id": "kb_src_doc_006_001",
+        "source_document": "qualification_rules_form.json",
+        "section": "Main Policy Body",
+        "content_snippet": "{\n \"demo_notice\": \"DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY\",\n \"form_id\": \"FORM_SME_QUAL_2026\",\n \"version\": \"2.1\",\n \"last_updated\": \"2026-02-01\",\n \"qualification_rules\": {\n \"minimum_busines...",
+        "relevance_score": 0.8008
+      },
+      {
+        "record_id": "kb_src_doc_003_003",
+        "source_document": "escalation_and_edge_cases.md",
+        "section": "1. Edge Case Handling Matrix",
+        "content_snippet": "| Scenario / Edge Case | Trigger Condition | System Protocol & Action |\n| :--- | :--- | :--- |\n| **Incomplete Information** | Customer omits revenue or business age | Prompt caller up to 2 times for m...",
+        "relevance_score": 0.5295
+      },
+      {
+        "record_id": "kb_src_doc_001_003",
+        "source_document": "product_guidelines_v2.md",
+        "section": "1. Product Overview",
+        "content_snippet": "Our Business Loan program provides fast, flexible financing to small and medium-sized enterprises (SMEs) for growth, working capital, and operational expansion.",
+        "relevance_score": 0.3821
+      }
+    ]
+  },
+  {
+    "eval_id": "EVAL_002",
+    "category": "Required documentation",
+    "user_question": "What documentation is required to apply for a business loan?",
+    "top_retrieved_chunk_id": "kb_src_doc_001_007",
+    "source_document": "product_guidelines_v2.md",
+    "section_info": "3. Business Eligibility & Qualification Rules",
+    "relevance_score": 0.997,
+    "relevance_explanation": "Retrieved relevant chunk from product_guidelines_v2.md [3. Business Eligibility & Qualification Rules] with score 0.9970. Grounded answer generated.",
+    "verdict": "PASS",
+    "info_available": true,
+    "grounded_answer": "Based on the provided knowledge base, the required documentation to apply for a business loan includes:\n\n* 6 consecutive months of official corporate bank statements.\n* Last 2 years of filed business tax returns (or audited P&L statement).\n* Valid government ID of primary business owners holding \u226520% equity (Government-issued photo ID such as a Passport or Driver License).\n* Proof of business ownership and legal address (including an active state or local business registration license).",
+    "citations": [
+      {
+        "record_id": "kb_src_doc_001_007",
+        "source_document": "product_guidelines_v2.md",
+        "section": "3. Business Eligibility & Qualification Rules",
+        "content_snippet": "To qualify for a Business Loan, the applicant enterprise must fulfill the following mandatory criteria:\n\n1. **Operating History**: Minimum of **12 months** continuous active operation (24+ months pref...",
+        "relevance_score": 0.997
+      },
+      {
+        "record_id": "kb_src_doc_006_001",
+        "source_document": "qualification_rules_form.json",
+        "section": "Main Policy Body",
+        "content_snippet": "{\n \"demo_notice\": \"DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY\",\n \"form_id\": \"FORM_SME_QUAL_2026\",\n \"version\": \"2.1\",\n \"last_updated\": \"2026-02-01\",\n \"qualification_rules\": {\n \"minimum_busines...",
+        "relevance_score": 0.855
+      },
+      {
+        "record_id": "kb_src_doc_004_001",
+        "source_document": "faq_webpage.html",
+        "section": "Overview / General",
+        "content_snippet": "SME Business Loan FAQs - Demo Portal\n\nFrequently Asked Questions (FAQ)\n\nQ1: What is a business loan and how can I use it?\n\nA business loan is a commercial credit facility provided to registered compan...",
+        "relevance_score": 0.7971
+      },
+      {
+        "record_id": "kb_src_doc_003_003",
+        "source_document": "escalation_and_edge_cases.md",
+        "section": "1. Edge Case Handling Matrix",
+        "content_snippet": "| Scenario / Edge Case | Trigger Condition | System Protocol & Action |\n| :--- | :--- | :--- |\n| **Incomplete Information** | Customer omits revenue or business age | Prompt caller up to 2 times for m...",
+        "relevance_score": 0.5238
+      },
+      {
+        "record_id": "kb_src_doc_002_005",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 2: \"There is too much documentation required.\"",
+        "content_snippet": "- **Root Cause**: Friction in providing bank statements and tax filings.\n- **Grounded Response**:\n \"I hear you\u2014gathering documents takes time! However, because we only require 6 months of bank stateme...",
+        "relevance_score": 0.4937
+      }
+    ]
+  },
+  {
+    "eval_id": "EVAL_003",
+    "category": "Loan amount / qualification rule",
+    "user_question": "What is the maximum loan amount for unsecured business loans and minimum turnover?",
+    "top_retrieved_chunk_id": "kb_src_doc_legacy_001_003",
+    "source_document": "product_policy_v1_legacy.md",
+    "section_info": "1. Legacy Product Overview (Historical Reference)",
+    "relevance_score": 0.998,
+    "relevance_explanation": "Retrieved relevant chunk from product_policy_v1_legacy.md [1. Legacy Product Overview (Historical Reference)] with score 0.9980. Grounded answer generated.",
+    "verdict": "PASS",
+    "info_available": true,
+    "grounded_answer": "Based on the provided evidence:\n\n* **Maximum Unsecured Loan Amount:** $100,000 (under the 2026 Policy v2.0 / current parameters).\n* **Minimum Annual Turnover:** $100,000 (under the 2026 Policy v2.0 / current requirements).",
+    "citations": [
+      {
+        "record_id": "kb_src_doc_legacy_001_003",
+        "source_document": "product_policy_v1_legacy.md",
+        "section": "1. Legacy Product Overview (Historical Reference)",
+        "content_snippet": "Under the 2024 Credit Framework (v1.0), commercial borrowing parameters were configured as follows:\n\n- **Minimum Business Turnover**: $80,000 per annum (Note: Increased to $100,000 in 2026 Policy v2.0...",
+        "relevance_score": 0.998
+      },
+      {
+        "record_id": "kb_src_doc_004_001",
+        "source_document": "faq_webpage.html",
+        "section": "Overview / General",
+        "content_snippet": "SME Business Loan FAQs - Demo Portal\n\nFrequently Asked Questions (FAQ)\n\nQ1: What is a business loan and how can I use it?\n\nA business loan is a commercial credit facility provided to registered compan...",
+        "relevance_score": 0.979
+      },
+      {
+        "record_id": "kb_src_doc_005_001",
+        "source_document": "product_matrix.csv",
+        "section": "Main Policy Body",
+        "content_snippet": "product_code | product_name | min_loan_amount | max_loan_amount | min_tenure_months | max_tenure_months | apr_range | processing_fee_pct | collateral_required | min_annual_turnover | min_operating_mon...",
+        "relevance_score": 0.9749
+      },
+      {
+        "record_id": "kb_src_doc_001_004",
+        "source_document": "product_guidelines_v2.md",
+        "section": "Loan Parameters Table",
+        "content_snippet": "| Parameter | Unsecured Business Loan | Secured Equipment / Property Loan |\n| :--- | :--- | :--- |\n| **Loan Amount Range** | $10,000 \u2013 $100,000 | $100,001 \u2013 $500,000 |\n| **Tenure / Duration** | 6 mont...",
+        "relevance_score": 0.9436
+      },
+      {
+        "record_id": "kb_src_doc_002_007",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 4: \"The maximum loan amount is insufficient for my expansion.\"",
+        "content_snippet": "- **Root Cause**: Requesting >$100,000 without offering asset collateral.\n- **Grounded Response**:\n \"Our unsecured business loan option caps at $100,000. If your business requires up to $500,000, we c...",
+        "relevance_score": 0.9196
+      }
+    ]
+  },
+  {
+    "eval_id": "EVAL_004",
+    "category": "An objection or FAQ",
+    "user_question": "Why do you need so many business documents? I don't want to provide all of them.",
+    "top_retrieved_chunk_id": "kb_src_doc_002_005",
+    "source_document": "objection_handling_guide.md",
+    "section_info": "Objection 2: \"There is too much documentation required.\"",
+    "relevance_score": 0.0574,
+    "relevance_explanation": "Retrieved relevant chunk from objection_handling_guide.md [Objection 2: \"There is too much documentation required.\"] with score 0.0574. Grounded answer generated.",
+    "verdict": "PASS",
+    "info_available": true,
+    "grounded_answer": "Gathering documents takes time, but we only require 6 months of bank statements and your business tax return to process preliminary approval within 24 to 48 hours without requiring property appraisals or lengthy physical audits. \n\nWe take data privacy very seriously: all financial documents are encrypted using 256-bit SSL protocols and are evaluated strictly by licensed risk algorithms for income verification. Without bank statements, we cannot assess monthly cashflow to approve your loan.",
+    "citations": [
+      {
+        "record_id": "kb_src_doc_002_005",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 2: \"There is too much documentation required.\"",
+        "content_snippet": "- **Root Cause**: Friction in providing bank statements and tax filings.\n- **Grounded Response**:\n \"I hear you\u2014gathering documents takes time! However, because we only require 6 months of bank stateme...",
+        "relevance_score": 0.0574
+      },
+      {
+        "record_id": "kb_src_doc_001_006",
+        "source_document": "product_guidelines_v2.md",
+        "section": "Strictly Unsupported Uses (Instant Rejection):",
+        "content_snippet": "- Personal residential mortgage payments or personal leisure travel\n- Gambling, speculative cryptocurrency purchases, or stock trading\n- Illegal activities or un-registered business activities\n\n---",
+        "relevance_score": 0.0073
+      },
+      {
+        "record_id": "kb_src_doc_006_001",
+        "source_document": "qualification_rules_form.json",
+        "section": "Main Policy Body",
+        "content_snippet": "{\n \"demo_notice\": \"DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY\",\n \"form_id\": \"FORM_SME_QUAL_2026\",\n \"version\": \"2.1\",\n \"last_updated\": \"2026-02-01\",\n \"qualification_rules\": {\n \"minimum_busines...",
+        "relevance_score": 0.0072
+      },
+      {
+        "record_id": "kb_src_doc_002_010",
+        "source_document": "objection_handling_guide.md",
+        "section": "Objection 7: \"I do not want to share my bank statements or tax documents.\"",
+        "content_snippet": "- **Root Cause**: Privacy concerns or hesitation to share sensitive financial data.\n- **Grounded Response**:\n \"We take data privacy very seriously. All financial documents are encrypted using 256-bit ...",
+        "relevance_score": 0.0064
+      },
+      {
+        "record_id": "kb_src_doc_001_007",
+        "source_document": "product_guidelines_v2.md",
+        "section": "3. Business Eligibility & Qualification Rules",
+        "content_snippet": "To qualify for a Business Loan, the applicant enterprise must fulfill the following mandatory criteria:\n\n1. **Operating History**: Minimum of **12 months** continuous active operation (24+ months pref...",
+        "relevance_score": 0.0019
+      }
+    ]
+  },
+  {
+    "eval_id": "EVAL_005",
+    "category": "An unsupported/out-of-scope question",
+    "user_question": "How do I bake a chocolate cake at home?",
+    "top_retrieved_chunk_id": "kb_src_doc_003_001",
+    "source_document": "escalation_and_edge_cases.md",
+    "section_info": "Overview / General",
+    "relevance_score": 0.0012,
+    "relevance_explanation": "Correctly recognized unsupported query and executed safe fallback without inventing facts.",
+    "verdict": "PASS",
+    "info_available": false,
+    "grounded_answer": "I don't have enough verified information in the knowledge base to answer that reliably. I can connect you with a human representative.",
+    "citations": [
+      {
+        "record_id": "kb_src_doc_003_001",
+        "source_document": "escalation_and_edge_cases.md",
+        "section": "Overview / General",
+        "content_snippet": "<!-- DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY -->",
+        "relevance_score": 0.0012
+      },
+      {
+        "record_id": "kb_src_doc_002_001",
+        "source_document": "objection_handling_guide.md",
+        "section": "Overview / General",
+        "content_snippet": "<!-- DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY -->",
+        "relevance_score": 0.0012
+      },
+      {
+        "record_id": "kb_src_doc_001_001",
+        "source_document": "product_guidelines_v2.md",
+        "section": "Overview / General",
+        "content_snippet": "<!-- DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY -->",
+        "relevance_score": 0.0012
+      },
+      {
+        "record_id": "kb_src_doc_legacy_001_001",
+        "source_document": "product_policy_v1_legacy.md",
+        "section": "Overview / General",
+        "content_snippet": "<!-- DEMO / SYNTHETIC DATA: FOR ASSESSMENT PURPOSES ONLY -->",
+        "relevance_score": 0.0012
+      },
+      {
+        "record_id": "kb_src_doc_legacy_001_004",
+        "source_document": "product_policy_v1_legacy.md",
+        "section": "Q: What is the minimum revenue required for a business loan?",
+        "content_snippet": "In our 2024 policy framework, businesses required at least $80,000 in annual revenue (turnover). *Please note: Current 2026 policies now mandate $100,000 minimum revenue.*",
+        "relevance_score": 0.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "call_id": "id_call_01",
+  "market": "Indonesia",
+  "domain": "Multifinance / Consumer Finance",
+  "scenario": "Cooperative Motor Loan Installment Query",
+  "audio_file": "id_call_01_cooperative.mp3",
+  "language": "Bahasa Indonesia (Formal & Finance Terms)",
+  "asr_provider": "Deepgram Nova-2 (id-ID)",
+  "tts_provider": "Google Cloud TTS (id-ID-Wavenet-A)",
+  "transcript_json": "q3_multilingual/evaluation/transcripts/id_01_cooperative.json",
+  "compliance_verified": true,
+  "notes": "Evidence structure prepared for 2 recorded calls per market."
+}
