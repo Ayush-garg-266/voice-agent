@@ -712,6 +712,12 @@ To elevate this codebase to an enterprise production environment:
 
 ---
 
+## Demo Video
+
+[Watch the 5-minute project demo](https://drive.google.com/file/d/1-cpL8m_e82uUFYH5cCNnPDzNHaBOjVNl/view?usp=sharing)
+
+---
+
 ## Author
 
 **Ayush Garg**  
@@ -719,5 +725,6 @@ To elevate this codebase to an enterprise production environment:
 **Program:** B.Tech Information Technology  
 **Batch:** 2023–2027  
 **Email:** ayush06804@gmail.com
+
 
 ---
