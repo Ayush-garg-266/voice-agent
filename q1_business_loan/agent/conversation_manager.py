@@ -37,7 +37,7 @@ class Q1ConversationManager:
             "speak to a human", "talk to a human", "talk to a person", "human loan officer",
             "transfer me", "supervisor", "real person"
         ]
-        if any(term in user_lower for term in human_keywords):
+        if any(re.search(r'\b' + re.escape(term) + r'\b', user_lower) for term in human_keywords):
             self.state.human_escalation_requested = True
             self.state.escalation_reason = "Customer requested human assistance."
 
@@ -83,6 +83,26 @@ class Q1ConversationManager:
                 self.retrieved_citations.extend(citations)
                 retrieved_source = citations[0].get("source_document")
                 retrieved_record_id = citations[0].get("record_id")
+
+            # Deterministic fallback when KB does not contain verified information
+            if not rag_res.get("info_available", True):
+                agent_response = rag_res.get(
+                    "grounded_answer",
+                    "I don't have enough verified information in the knowledge base to answer that reliably. I can connect you with a human representative."
+                )
+                self.history.append({"role": "assistant", "content": agent_response})
+                eval_res = self.engine.evaluate(self.state, self.retrieved_citations)
+                elapsed_ms = round((time.time() - start_time) * 1000, 2)
+
+                return {
+                    "agent_response": agent_response,
+                    "qualification_result": eval_res.model_dump(),
+                    "tool_called": True,
+                    "kb_query": kb_query_executed,
+                    "retrieved_source": retrieved_source,
+                    "retrieved_record_id": retrieved_record_id,
+                    "turn_latency_ms": elapsed_ms
+                }
 
             rag_evidence_text = (
                 f"\n\n[VERIFIED KB EVIDENCE]:\n{rag_res.get('grounded_answer', '')}\n"

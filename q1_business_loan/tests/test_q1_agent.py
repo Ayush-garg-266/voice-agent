@@ -95,7 +95,11 @@ def test_scenario_4_out_of_scope():
         "How do I file my personal residential mortgage tax deduction in Texas?"
     ]
     res = run_scenario("TEST_004", turns)
-    assert "don't have enough verified information" in res["agent_response"].lower() or "personal" in res["agent_response"].lower() or "human" in res["agent_response"].lower()
+    assert res["tool_called"] is True
+    assert res["kb_query"] == "How do I file my personal residential mortgage tax deduction in Texas?"
+    assert res["qualification_result"]["escalation_required"] is False
+    assert res["qualification_result"]["qualification_status"] != "escalated"
+    assert "don't have enough verified information" in res["agent_response"].lower()
 
 
 def test_scenario_5_human_escalation():
