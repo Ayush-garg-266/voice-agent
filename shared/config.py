@@ -20,8 +20,8 @@ class Settings(BaseSettings):
     SUFFICIENCY_THRESHOLD: float = 0.01
 
     # Optional & Future Service Integrations
-    VAPI_API_KEY: Optional[str] = None
-    VAPI_PUBLIC_KEY: Optional[str] = None
+    VAPI_API_KEY: Optional[str] = os.getenv("VAPI_API_KEY")
+    VAPI_PUBLIC_KEY: Optional[str] = os.getenv("VAPI_PUBLIC_KEY")
     DEEPGRAM_API_KEY: Optional[str] = None
     LANGSMITH_API_KEY: Optional[str] = None
     LANGSMITH_PROJECT: Optional[str] = "ai-engineer-assessment"

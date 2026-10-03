@@ -532,7 +532,8 @@ GEMINI_MODEL=gemini-2.5-flash
 | `GEMINI_MODEL` | No | Target Gemini model name (default: `gemini-2.5-flash`) | `GEMINI_MODEL=gemini-2.5-flash` |
 | `HOST` | No | Server binding host | `HOST=0.0.0.0` |
 | `PORT` | No | Default FastAPI server port | `PORT=8000` |
-| `VAPI_API_KEY` | No | Production Vapi telephony API key | `VAPI_API_KEY=<your_vapi_key>` |
+| `VAPI_API_KEY` | No | Production Vapi telephony API key | `VAPI_API_KEY=<your_vapi_api_key>` |
+| `VAPI_PUBLIC_KEY` | No | Production Vapi telephony public key | `VAPI_PUBLIC_KEY=<your_vapi_public_key>` |
 | `DEEPGRAM_API_KEY` | No | Production Deepgram ASR API key | `DEEPGRAM_API_KEY=<your_deepgram_key>` |
 | `COHERE_API_KEY` | No | Cohere Rerank API key for Q2 Knowledge Base | `COHERE_API_KEY=<your_cohere_key>` |
 

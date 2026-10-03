@@ -10,8 +10,8 @@ Ensure the following environment variables are present in your `.env` file:
 
 ```env
 GEMINI_API_KEY=<your_gemini_api_key>
-VAPI_API_KEY=b0a5226d-e13c-45cd-a3b2-81061de1f7d7
-VAPI_PUBLIC_KEY=3b366abd-f895-412d-a78f-39411257b483
+VAPI_API_KEY=<your_vapi_api_key>
+VAPI_PUBLIC_KEY=<your_vapi_public_key>
 ```
 
 ---
